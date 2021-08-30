@@ -1,10 +1,10 @@
 
 defaultNamespace: cattle-logging-system
 helm:
-  repo: https://charts.rancher.io
-  chart: rancher-logging
+  repo: https://kubernetes-charts.banzaicloud.com
+  chart: logging-operator
   releaseName: rancher-logging
-  version: 3.9.400
+  version: 3.13.0
 diff:
   comparePatches:
   - apiVersion: logging.banzaicloud.io/v1beta1
