@@ -1,4 +1,4 @@
-defaultNamespace: kube-system
+defaultNamespace: cis-operator-system
 helm:
   releaseName: rancher-cis-benchmark
   repo: https://charts.rancher.io
