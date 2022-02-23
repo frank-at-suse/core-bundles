@@ -1,6 +1,4 @@
 defaultNamespace: neuvector-system
-  labels:
-    field.cattle.io/projectId: System
       
 helm:
   releaseName: neuvector
