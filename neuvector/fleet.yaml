@@ -1,0 +1,45 @@
+defaultNamespace: neuvector-system
+helm:
+  releaseName: neuvector
+  repo: https://neuvector.github.io/neuvector-helm/
+  chart: core
+  version: v1.9.0
+
+  values:
+    tag: 5.0.0-preview.2
+  
+    controller:
+    replicas: 1
+    apisvc:
+      type: NodePort
+    secret:
+      enabled: true
+    federation:
+      mastersvc:
+        type: NodePort
+      managedsvc:
+        type: NodePort
+
+    cve:
+      scanner:
+        replicas: 1
+
+    enforcer:
+      tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/control-plane
+        - effect: NoExecute
+          key: node-role.kubernetes.io/etcd
+
+    manager:
+      env:
+        ssl: false
+      ingress:
+        enabled: true
+        host: sslip.io
+        path: "/"
+      svc:
+        type: ClusterIP
+
+    k3s:
+      enabled: true
