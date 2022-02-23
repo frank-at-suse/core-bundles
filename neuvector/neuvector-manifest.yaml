@@ -21,6 +21,8 @@ spec:
     controller.apisvc.type: NodePort
     controller.federation.mastersvc.type: NodePort
     controller.federation.managedsvc.type: NodePort
+    controller.pvc.enabled: "true"
+    controller.pvc.storageClass: longhorn
     manager.image.repository: neuvector/manager.preview
     manager.replicas: 1
     manager.ingress.enabled: "true"
