@@ -10,6 +10,8 @@ helm:
     tag: 5.0.0-preview.2
   
     controller:
+      image:
+        repository: neuvector/controller.preview
       replicas: 1
       apisvc:
         type: NodePort
@@ -21,9 +23,16 @@ helm:
 
     cve:
       scanner:
+        image:
+          repository: neuvector/scanner.preview
+       updater:
+         image: neuvector/updater.preview
+           repository: 
         replicas: 1
 
     enforcer:
+      image:
+        repository: neuvector/enforcer.preview
       tolerations:
         - effect: NoSchedule
           key: node-role.kubernetes.io/control-plane
@@ -31,6 +40,8 @@ helm:
           key: node-role.kubernetes.io/etcd
 
     manager:
+      image:
+        repository: neuvector/manager.preview
       env:
         ssl: false
       ingress:
