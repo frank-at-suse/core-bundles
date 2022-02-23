@@ -1,4 +1,7 @@
 defaultNamespace: neuvector-system
+    labels:
+      field.cattle.io/projectId: System
+      
 helm:
   releaseName: neuvector
   repo: https://neuvector.github.io/neuvector-helm/
@@ -8,9 +11,6 @@ helm:
   values:
     registry: docker.io
     tag: 5.0.0-preview.2
-    
-    labels:
-      field.cattle.io/projectId: System
   
     controller:
       image:
