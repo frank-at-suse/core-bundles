@@ -9,14 +9,14 @@ helm:
     tag: 5.0.0-preview.2
   
     controller:
-    replicas: 1
-    apisvc:
-      type: NodePort
-    federation:
-      mastersvc:
+      replicas: 1
+      apisvc:
         type: NodePort
-      managedsvc:
-        type: NodePort
+      federation:
+        mastersvc:
+          type: NodePort
+        managedsvc:
+          type: NodePort
 
     cve:
       scanner:
