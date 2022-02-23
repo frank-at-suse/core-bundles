@@ -26,7 +26,7 @@ spec:
     cve.scanner.replicas: 1
     cve.updater.image.repository: neuvector/updater.preview
     cve.updater.image.tag: latest
-    tag: 4.4.3
+    tag: 5.0.0-preview.2
     manager.ingress.enabled: "true"
     manager.ingress.host: sslip.io
     manager.ingress.path: "/"
