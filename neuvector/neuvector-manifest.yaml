@@ -21,6 +21,8 @@ spec:
     controller.apisvc.type: NodePort
     controller.federation.mastersvc.type: NodePort
     controller.federation.managedsvc.type: NodePort
+    controller.pvc.enabled: "true"
+    controller.pvc.storageClass: longhorn
     manager.image.repository: neuvector/manager.preview
     manager.replicas: 1
     manager.ingress.enabled: "true"
@@ -29,7 +31,6 @@ spec:
     manager.env.ssl: "false"
     manager.svc.type: ClusterIP
     enforcer.image.repository: neuvector/enforcer.preview
-    enforcer.tolerations: {node-role.kubernetes.io/control-plane=:NoSchedule,node-role.kubernetes.io/etcd=:NoExecute}
     cve.scanner.image.repository: neuvector/scanner.preview
     cve.scanner.image.tag: latest
     cve.scanner.replicas: 1
