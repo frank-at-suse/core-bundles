@@ -21,6 +21,9 @@ helm:
           type: NodePort
         managedsvc:
           type: NodePort
+      pvc:
+        enabled: true
+        storageClass: longhorn
 
     cve:
       scanner:
