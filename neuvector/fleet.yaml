@@ -55,6 +55,8 @@ helm:
         tls: true
       svc:
         type: ClusterIP
+      certificate:
+        secret: felab-ingress
 
     k3s:
       enabled: true
