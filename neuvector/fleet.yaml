@@ -28,7 +28,8 @@ helm:
 
     cve:
       scanner:
-        env:
+        containers:
+        - env:
           securityContext:
             allowPrivilegeEscalation: true
             capabilities:
