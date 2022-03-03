@@ -27,6 +27,13 @@ helm:
         storageClass: longhorn
 
     cve:
+      env:
+      securityContext:
+        allowPrivilegeEscalation: true
+        capabilities:
+          drop:
+          - ALL
+        runAsNonRoot: false
       scanner:
         image:
           repository: neuvector/scanner.preview
