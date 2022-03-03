@@ -7,7 +7,6 @@ helm:
   version: v1.9.0
 
   values:
-    psp: true
     registry: docker.io
     tag: 5.0.0-preview.2
   
