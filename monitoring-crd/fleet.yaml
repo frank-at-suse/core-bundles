@@ -3,7 +3,7 @@ helm:
   releaseName: rancher-monitoring-crd
   chart: rancher-monitoring-crd
   repo: https://charts.rancher.io
-  version: 100.1.1+up19.0.3
+  version: 100.1.0+up19.0.3
 diff:
   comparePatches:
   - apiVersion: policy/v1beta1
