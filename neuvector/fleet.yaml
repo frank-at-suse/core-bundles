@@ -58,22 +58,3 @@ helm:
 
     k3s:
       enabled: true
-
----
-
-apiVersion: neuvector.com/v1
-kind: NvAdmissionControlSecurityRule
-metadata:
-  name: local
-spec:
-  config:
-    client_mode: service
-    enable: true
-    mode: protect
-  rules:
-  - action: deny
-    comment: Deny Deployments in "default" Namespace for CIS Guidelines
-    criteria:
-    - name: namespace
-      op: containsAny
-      value: default
