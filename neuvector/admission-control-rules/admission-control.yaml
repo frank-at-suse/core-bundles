@@ -10,7 +10,6 @@ spec:
     - name: namespace
       op: containsAny
       value: default
-    disabled: false
     id: 3
   - action: deny
     comment: Deny Deployments Exposed to Log4j Vulnerability
@@ -19,4 +18,3 @@ spec:
       op: containsAll
       value: CVE-2021-44228
     disabled: false
-    id: 4
