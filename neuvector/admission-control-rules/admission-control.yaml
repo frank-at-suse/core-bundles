@@ -2,7 +2,6 @@ apiVersion: neuvector.com/v1
 kind: NvAdmissionControlSecurityRule
 metadata:
   name: local
-  namespace: neuvector-system
 spec:
   config:
     client_mode: service
