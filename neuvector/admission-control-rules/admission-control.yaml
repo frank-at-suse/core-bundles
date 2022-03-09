@@ -1,7 +1,7 @@
 apiVersion: neuvector.com/v1
 kind: NvAdmissionControlSecurityRule
 metadata:
-  name: fleet-defined
+  name: local
 spec:
   rules:
   - action: deny
