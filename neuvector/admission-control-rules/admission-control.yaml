@@ -1,7 +1,7 @@
 apiVersion: neuvector.com/v1
 kind: NvAdmissionControlSecurityRule
 metadata:
-  name: local
+  name: fleet-defined
 spec:
   config:
     client_mode: service
@@ -9,7 +9,7 @@ spec:
     mode: protect
   rules:
   - action: deny
-    comment: (via Fleet) Deny Deployments in "default" Namespace per CIS Guidelines
+    comment: Deny Deployments in "default" Namespace per CIS Guidelines
     criteria:
     - name: namespace
       op: containsAny
@@ -17,7 +17,7 @@ spec:
     disabled: false
     id: 3
   - action: deny
-    comment: (via Fleet) Deny Deployments Exposed to Log4j Vulnerability
+    comment: Deny Deployments Exposed to Log4j Vulnerability
     criteria:
     - name: cveNames
       op: containsAll
