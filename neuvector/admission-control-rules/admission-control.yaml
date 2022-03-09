@@ -9,7 +9,7 @@ spec:
     mode: protect
   rules:
   - action: deny
-    comment: (via Fleet) Deny Deployments in "default" Namespace per CIS Guidelines
+    comment: (via Fleet) Deny Deployments in "default" Namespace per CIS
     criteria:
     - name: namespace
       op: containsAny
