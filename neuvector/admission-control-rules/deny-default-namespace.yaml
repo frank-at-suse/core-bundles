@@ -1,7 +1,7 @@
 apiVersion: neuvector.com/v1
 kind: NvAdmissionControlSecurityRule
 metadata:
-  name: deny-default-ns
+  name: local
   namespace: neuvector-system
 spec:
   config:
