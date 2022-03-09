@@ -9,14 +9,14 @@ spec:
     mode: protect
   rules:
   - action: deny
-    comment: Deny Deployments in "default" Namespace per CIS Guidelines
+    comment: (via Fleet) Deny Deployments in "default" Namespace per CIS Guidelines
     criteria:
     - name: namespace
       op: containsAny
       value: default
     disabled: false
   - action: deny
-    comment: Deny Deployments Exposed to Log4j Vulnerability
+    comment: (via Fleet) Deny Deployments Exposed to Log4j Vulnerability
     criteria:
     - name: cveNames
       op: containsAll
