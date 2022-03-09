@@ -3,10 +3,6 @@ kind: NvAdmissionControlSecurityRule
 metadata:
   name: fleet-defined
 spec:
-  config:
-    client_mode: service
-    enable: true
-    mode: protect
   rules:
   - action: deny
     comment: Deny Deployments in "default" Namespace per CIS Guidelines
