@@ -1,7 +1,7 @@
 apiVersion: neuvector.com/v1
 kind: NvAdmissionControlSecurityRule
 metadata:
-  name: local
+  name: deny-log4j
   namespace: neuvector-system
 spec:
   rules:
