@@ -47,14 +47,14 @@ helm:
       image:
         repository: neuvector/manager.preview
       env:
-        ssl: true
-      svc:
-        type: ClusterIP
+        ssl: false
       ingress:
         enabled: true
         host: sslip.io
         path: "/"
         tls: true
+      svc:
+        type: ClusterIP
 
     k3s:
       enabled: true
