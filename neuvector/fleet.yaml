@@ -28,7 +28,7 @@ helm:
     cve:
       scanner:
         image:
-          repository: neuvector/scanner.preview:latest
+          repository: neuvector/scanner.preview
       updater:
         image:
           repository: neuvector/updater.preview
