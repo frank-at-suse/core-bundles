@@ -50,6 +50,11 @@ helm:
         ssl: true
       svc:
         type: ClusterIP
+      ingress:
+        enabled: true
+        host: sslip.io
+        path: "/"
+        tls: true
 
     k3s:
       enabled: true
