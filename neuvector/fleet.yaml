@@ -66,7 +66,4 @@ diff:
     name: neuvector-webui-ingress
     namespace: neuvector-system
     operations:
-    - {"op":"remove", "path":"/spec/rules/host"}
-    - {"op":"remove", "path":"/http/paths/backend/service/name"}
-    - {"op":"remove", "path":"/port/number"}
-    - {"op":"remove", "path":"/path/pathType"}
+    - {"op":"remove", "path":"/spec/rules/}
