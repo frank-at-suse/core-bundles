@@ -58,7 +58,7 @@ helm:
 
     k3s:
       enabled: true
-
+#diff is here to account for sslip.io being used on the Manager ingress resource.  This can safely be removed if using a fixed host for manager Ingress resource
 diff:
   comparePatches:
   - apiVersion: networking.k8s.io/v1
