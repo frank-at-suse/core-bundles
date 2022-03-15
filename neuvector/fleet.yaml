@@ -66,4 +66,4 @@ diff:
     name: neuvector-webui-ingress
     namespace: neuvector-system
     operations:
-    - {"op":"remove", "path":"/spec/rules/}
+    - {"op":"remove", "path":"/spec/rules/"}
