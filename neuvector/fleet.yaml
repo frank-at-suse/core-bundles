@@ -25,3 +25,4 @@ diff:
     - cve-values.yaml
     - enforcer-values.yaml
     - manager-values.yaml
+    - registry-values.yaml
