@@ -1,0 +1,14 @@
+    controller:
+      image:
+        repository: neuvector/controller.preview
+      replicas: 1
+      apisvc:
+        type: NodePort
+      federation:
+        mastersvc:
+          type: NodePort
+        managedsvc:
+          type: NodePort
+      pvc:
+        enabled: true
+        storageClass: longhorn

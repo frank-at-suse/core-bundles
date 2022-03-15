@@ -6,7 +6,7 @@ helm:
   chart: core
   version: v1.9.0
 
-# This diff is here to account for sslip.io being used on the manager Ingress resource (the Fleet repo will get perpetually stuck in "Modified") 
+# This diff accounts for sslip.io being used on the manager Ingress resource (the Fleet repo will get perpetually stuck in "Modified") 
 # and can safely be removed if not using an Ingress, or if using a fixed host for the manager Ingress resource.
 diff:
   comparePatches:
@@ -15,57 +15,17 @@ diff:
     name: neuvector-webui-ingress
     namespace: neuvector-system
     operations:
-    - {"op":"remove", "path":"/spec/rules"}
+    - { "op": "remove", "path": "/spec/rules" }
 
   values:
     registry: docker.io
     tag: 5.0.0-preview.2
-  
-    controller:
-      image:
-        repository: neuvector/controller.preview
-      replicas: 1
-      apisvc:
-        type: NodePort
-      federation:
-        mastersvc:
-          type: NodePort
-        managedsvc:
-          type: NodePort
-      pvc:
-        enabled: true
-        storageClass: longhorn
-
-    cve:
-      scanner:
-        image:
-          repository: neuvector/scanner.preview
-      updater:
-        image:
-          repository: neuvector/updater.preview
-        replicas: 1
-
-    enforcer:
-      image:
-        repository: neuvector/enforcer.preview
-      tolerations:
-        - effect: NoSchedule
-          key: node-role.kubernetes.io/control-plane
-        - effect: NoExecute
-          key: node-role.kubernetes.io/etcd
-
-    manager:
-      image:
-        repository: neuvector/manager.preview
-      env:
-        ssl: false
-      ingress:
-        enabled: true
-        host: sslip.io
-        path: "/"
-        tls: true
-      svc:
-        type: ClusterIP
 
     k3s:
       enabled: true
+
+  valuesFiles:
+    - controller-values.yaml
+    - cve-values.yaml
+    - enforcer-values.yaml
+    - manager-values.yaml

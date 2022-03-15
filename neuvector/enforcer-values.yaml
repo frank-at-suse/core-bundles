@@ -1,0 +1,8 @@
+enforcer:
+  image:
+    repository: neuvector/enforcer.preview
+  tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/control-plane
+    - effect: NoExecute
+      key: node-role.kubernetes.io/etcd
