@@ -9,6 +9,9 @@ helm:
   values:
     registry: docker.io
     tag: 5.0.0-preview.2
+
+    k3s:
+      enabled: true
     
   valuesFiles:
     - controller-values.yaml
@@ -26,6 +29,3 @@ diff:
     namespace: neuvector-system
     operations:
     - { "op": "remove", "path": "/spec/rules" }
-
-    k3s:
-      enabled: true
