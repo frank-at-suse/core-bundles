@@ -65,4 +65,4 @@ diff:
     kind: Ingress
     name: neuvector-webui-ingress
     operations:
-    - {"op":"remove", "path":"/spec/rules/host/http/paths/backend/service/name/port/number/path/pathType/prefix"}
+    - {"op":"remove", "path":"/spec/rules/host/http/paths/backend/service/name/port/number/path/pathType"}
