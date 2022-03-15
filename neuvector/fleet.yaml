@@ -6,6 +6,17 @@ helm:
   chart: core
   version: v1.9.0
 
+# This diff is here to account for sslip.io being used on the manager Ingress resource (the Fleet repo will get perpetually stuck in "Modified") 
+# and can safely be removed if not using an Ingress, or if using a fixed host for the manager Ingress resource.
+diff:
+  comparePatches:
+  - apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    name: neuvector-webui-ingress
+    namespace: neuvector-system
+    operations:
+    - {"op":"remove", "path":"/spec/rules"}
+
   values:
     registry: docker.io
     tag: 5.0.0-preview.2
@@ -58,12 +69,3 @@ helm:
 
     k3s:
       enabled: true
-#diff is here to account for sslip.io being used on the Manager ingress resource (the Fleet repo gets perpetually stuck on "Modified").  This diff can safely be removed if not using an ingress or if using a fixed host for manager Ingress resource
-diff:
-  comparePatches:
-  - apiVersion: networking.k8s.io/v1
-    kind: Ingress
-    name: neuvector-webui-ingress
-    namespace: neuvector-system
-    operations:
-    - {"op":"remove", "path":"/spec/rules"}
