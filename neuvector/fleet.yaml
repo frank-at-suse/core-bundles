@@ -6,20 +6,15 @@ helm:
   chart: core
   version: v1.9.0
   
-  values:
-
-    k3s:
-      enabled: true
-    
   valuesFiles:
     - controller-values.yaml
+    - cri-values.yaml
     - enforcer-values.yaml
     - manager-values.yaml
     - registry-values.yaml
     - scanner-values.yaml
-
 # This diff accounts for sslip.io being used on the manager Ingress resource (the Fleet repo will get perpetually stuck in "Modified") 
-# and can safely be removed if not using an Ingress, or if using a fixed host for the manager Ingress resource.
+# and can it safely be removed if not using an Ingress, or if using a fixed host for the manager Ingress resource.
 diff:
   comparePatches:
   - apiVersion: networking.k8s.io/v1
