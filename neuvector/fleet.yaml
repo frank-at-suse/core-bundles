@@ -17,10 +17,6 @@ diff:
     operations:
     - { "op": "remove", "path": "/spec/rules" }
 
-  values:
-    registry: docker.io
-    tag: 5.0.0-preview.2
-
     k3s:
       enabled: true
 
