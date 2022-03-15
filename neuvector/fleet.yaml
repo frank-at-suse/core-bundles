@@ -66,4 +66,3 @@ diff:
     name: neuvector-webui-ingress
     operations:
     - {"op":"remove", "path":"/spec/rules/host/http/paths/backend/service/name/port/path/pathType/Prefix"}
-{"spec":{"rules":[{"host":"sslip.io","http":{"paths":[{"backend":{"service":{"name":"neuvector-service-webui","port":{"number":8443}}},"path":"/","pathType":"Prefix"}]}}]}}
