@@ -1,4 +1,7 @@
 values:
+  registry: docker.io
+  tag: 5.0.0-preview.2
+  
   controller:
     image:
       repository: neuvector/controller.preview
