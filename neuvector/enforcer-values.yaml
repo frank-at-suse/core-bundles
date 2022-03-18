@@ -1,3 +1,5 @@
+# Tolerations to allow scheduling Enforcer pods on Control Plane nodes will vary across k8s distributions 
+# so homeowrk may be required.  Below tolerations are for RKE2/k3s.  For RKE1, change "control-plane" to "controlplane".
 enforcer:
   image:
     repository: neuvector/enforcer.preview
