@@ -5,9 +5,8 @@ manager:
     ssl: false
   ingress:
     enabled: true
-    host: neuvector.felab.io
+    host: sslip.io
     path: "/"
-    secretName: ingress-wildcard-cert
     tls: true
   svc:
     type: ClusterIP
