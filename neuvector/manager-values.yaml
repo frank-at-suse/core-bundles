@@ -5,7 +5,7 @@ manager:
     ssl: false
   ingress:
     enabled: true
-    host: sslip.io
+    host: neuvector.felab.io
     path: "/"
     tls: true
   svc:
