@@ -10,6 +10,13 @@ controller:
       type: NodePort
     managedsvc:
       type: NodePort
+  secret:
+    data:
+      userinitcfg.yaml:
+        users:
+        - Fullname: admin
+          Password: chang3me
+          Role: admin
   pvc:
     enabled: true
     storageClass: longhorn
