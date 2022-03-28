@@ -11,6 +11,7 @@ controller:
     managedsvc:
       type: NodePort
   secret:
+    enabled: true
     data:
       userinitcfg.yaml:
         users:
