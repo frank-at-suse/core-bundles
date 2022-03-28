@@ -16,7 +16,7 @@ controller:
       userinitcfg.yaml:
         users:
         - Fullname: admin
-          Password: chang3me
+          Password: chang3me!
           Role: admin
   pvc:
     enabled: true
