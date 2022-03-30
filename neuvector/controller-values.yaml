@@ -9,6 +9,7 @@ controller:
     enabled: true
     host: nvctl.felab.io
     path: "/"
+    tls: true
 # Below values are needed for cluster Federation, otherwise can be ignored
 #  federation:
 #    mastersvc:
