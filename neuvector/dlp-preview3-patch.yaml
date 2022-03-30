@@ -1,11 +1,6 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  managedFields:
-  - apiVersion: rbac.authorization.k8s.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:rules: {}
   name: neuvector-binding-nvdlpsecurityrules
 rules:
 - apiGroups:
@@ -21,12 +16,6 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  managedFields:
-  - apiVersion: rbac.authorization.k8s.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:roleRef: {}
-      f:subjects: {}
   name: neuvector-binding-nvdlpsecurityrules
 roleRef:
   apiGroup: rbac.authorization.k8s.io
