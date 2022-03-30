@@ -2,11 +2,11 @@ manager:
   image:
     repository: neuvector/manager.preview
   env:
-    ssl: false
-  ingress:
-    enabled: true
-    host: neuvector.felab.io
-    path: "/"
-    tls: true
+    ssl: true
+#  ingress:
+#    enabled: true
+#    host: neuvector.felab.io
+#    path: "/"
+#    tls: true
   svc:
     type: ClusterIP
