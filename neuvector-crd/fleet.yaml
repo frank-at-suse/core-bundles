@@ -1,1 +1,12 @@
+defaultNamespace: neuvector-system
 
+helm:
+  releaseName: neuvector
+  repo: https://neuvector.github.io/neuvector-helm/
+  chart: crd
+  version: v1.9.1
+  
+serviceAccount: default
+
+crdwebhook:
+  type: ClusterIP
