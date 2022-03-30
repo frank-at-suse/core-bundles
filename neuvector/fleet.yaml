@@ -8,6 +8,7 @@ helm:
   
   valuesFiles:
     - controller-values.yaml
+    - crd-values.yaml
     - cri-values.yaml
     - enforcer-values.yaml
     - manager-values.yaml
