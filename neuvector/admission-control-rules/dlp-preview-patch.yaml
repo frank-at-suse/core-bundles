@@ -2,8 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: neuvector-binding-nvdlpsecurityrules
-spec:
-  rules:
-  - apiGroups:  [ " neuvector.com" ]
-    resources: [ "nvdlpsecurityrules" ]
-    verbs: [ "list", "delete" ]
+rules:
+- apiGroups:  [ "neuvector.com" ]
+  resources: [ "nvdlpsecurityrules" ]
+  verbs: [ "list", "delete" ]
