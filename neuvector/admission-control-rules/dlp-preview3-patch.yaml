@@ -3,10 +3,6 @@ kind: ClusterRole
 metadata:
   name: neuvector-binding-nvdlpsecurityrules
 rules:
-- apiGroups:
-  - neuvector.com
-  resources:
-  - nvdlpsecurityrules
-  verbs:
-  - list
-  - delete
+- apiGroups:  [" neuvector.com" ]
+  resources: [ "nvdlpsecurityrules" ]
+  verbs: [ "list", "delete" ]
