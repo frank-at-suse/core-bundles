@@ -8,8 +8,8 @@ helm:
   
   valuesFiles:
     - controller-values.yaml
-#    - crd-values.yaml
     - cri-values.yaml
+    - dlp-preview3-patch.yaml
     - enforcer-values.yaml
     - manager-values.yaml
     - registry-values.yaml
