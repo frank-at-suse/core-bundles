@@ -1,15 +1,20 @@
 controller:
   image:
     repository: neuvector/controller.preview
- # Replica count must be in odd-numbered counts per: https://open-docs.neuvector.com/deploying/production#deploying-the-controllers
+# Replica count must be in odd-numbered counts per: https://open-docs.neuvector.com/deploying/production#deploying-the-controllers
   replicas: 1
   apisvc:
     type: ClusterIP
-  federation:
-    mastersvc:
-      type: ClusterIP
-    managedsvc:
-      type: ClusterIP
+  ingress:
+    enabled: true
+    host: nvctl.felab.io
+    path: "/"
+# Below values are needed for cluster Federation, otherwise can be ignored
+#  federation:
+#    mastersvc:
+#      type: ClusterIP
+#    managedsvc:
+#      type: ClusterIP
   secret:
     enabled: true
     data:
@@ -18,6 +23,7 @@ controller:
         - Fullname: admin
           Password: chang3me!
           Role: admin
+          Timeout: 1800
   ranchersso:
     enabled: true
   pvc:
