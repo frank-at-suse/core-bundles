@@ -2,7 +2,7 @@ cve:
   scanner:
     image:
       repository: neuvector/scanner.preview
+    replicas: 1
   updater:
     image:
       repository: neuvector/updater.preview
-    replicas: 1
