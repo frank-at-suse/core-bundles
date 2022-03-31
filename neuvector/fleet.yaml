@@ -4,7 +4,7 @@ helm:
   releaseName: neuvector
   repo: https://neuvector.github.io/neuvector-helm/
   chart: core
-  version: v1.9.0
+  version: v1.9.1
   serviceAccount: neuvector
   
   valuesFiles:
