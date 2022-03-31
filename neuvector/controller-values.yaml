@@ -9,6 +9,7 @@ controller:
     enabled: true
     host: nvctl.felab.io
     path: "/"
+    secretName: ingress-wildcard-cert
     tls: true
 # Below values are needed for cluster Federation, otherwise can be ignored
 #  federation:
