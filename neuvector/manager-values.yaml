@@ -2,7 +2,7 @@ manager:
   image:
     repository: neuvector/manager.preview
   env:
-    ssl: true
+    ssl: false
   ingress:
     enabled: true
     host: neuvector.felab.io
