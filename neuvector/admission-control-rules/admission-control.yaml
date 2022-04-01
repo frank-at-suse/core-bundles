@@ -19,7 +19,7 @@ spec:
       value: CVE-2021-44228
     disabled: false
   - action: deny
-    comment: (via Fleet) Deny any Deployments Exposed to Sping4Shell Vulnerability
+    comment: (via Fleet) Deny any Deployments Exposed to Spring4Shell Vulnerability
     criteria:
     - name: cveNames
       op: containsAll
