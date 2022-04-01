@@ -18,7 +18,7 @@ spec:
     disabled: false
     
   - action: deny
-    comment: (via Fleet) Deny any Deployments Exposed to Log4j Vulnerability
+    comment: (via Fleet) Deny any Deployments Exposed to Log4j
     criteria:
     - name: cveNames
       op: containsAll
@@ -26,7 +26,7 @@ spec:
     disabled: false
     
   - action: deny
-    comment: (via Fleet) Deny any Deployments Exposed to Spring4Shell Vulnerability
+    comment: (via Fleet) Deny any Deployments Exposed to Spring4Shell
     criteria:
     - name: cveNames
       op: containsAll
