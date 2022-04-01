@@ -3,6 +3,11 @@ kind: NvAdmissionControlSecurityRule
 metadata:
   name: local
 spec:
+  config:
+    client_mode: service
+    enable: true
+    mode: protect
+    
   rules:
   - action: deny
     comment: (via Fleet) Deny any Deployments in "default" Namespace per CIS
@@ -11,6 +16,7 @@ spec:
       op: containsAny
       value: default
     disabled: false
+    
   - action: deny
     comment: (via Fleet) Deny any Deployments Exposed to Log4j Vulnerability
     criteria:
@@ -18,6 +24,7 @@ spec:
       op: containsAll
       value: CVE-2021-44228
     disabled: false
+    
   - action: deny
     comment: (via Fleet) Deny any Deployments Exposed to Spring4Shell Vulnerability
     criteria:
