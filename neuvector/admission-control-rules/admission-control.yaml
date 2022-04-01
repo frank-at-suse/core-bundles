@@ -18,3 +18,10 @@ spec:
       op: containsAll
       value: CVE-2021-44228
     disabled: false
+  - action: deny
+    comment: (via Fleet) Deny any Deployments Exposed to Sping4Shell Vulnerability
+    criteria:
+    - name: cveNames
+      op: containsAll
+      value: CVE-2022-22965
+    disabled: false
