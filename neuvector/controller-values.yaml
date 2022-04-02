@@ -22,6 +22,3 @@ controller:
           Timeout: 1800
   ranchersso:
     enabled: true
-  pvc:
-    enabled: true
-    storageClass: longhorn
