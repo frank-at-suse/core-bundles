@@ -20,6 +20,6 @@ diff:
   - apiVersion: networking.k8s.io/v1
     kind: Ingress
     name: neuvector-webui-ingress
-    namespace: neuvector-system
+    namespace: cattle-neuvector-system
     operations:
     - { "op": "remove", "path": "/spec/rules" }
