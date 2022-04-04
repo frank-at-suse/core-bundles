@@ -7,7 +7,7 @@ manager:
     enabled: true
     host: neuvector.felab.io
     path: "/"
-    secretName: ingress-wildcard-cert
+    secretName: neuvector-ui-cert
     tls: true
   svc:
     type: ClusterIP
