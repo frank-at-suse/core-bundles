@@ -5,6 +5,3 @@ helm:
   repo: https://metallb.github.io/metallb
   chart: metallb
   version: 0.12.1
-
-  valuesFiles:
-    - 01-configMap.yaml
