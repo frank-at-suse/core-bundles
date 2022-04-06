@@ -148,7 +148,7 @@ data:
   "async-query-volume": "true"
   "improved-csi-idempotency": "true"
   "improved-volume-topology": "true"
-  "block-volume-snapshot": "true"
+  "block-volume-snapshot": "false"
   "csi-windows-support": "false"
   "use-csinode-id": "true"
   "list-volumes": "false"
@@ -454,7 +454,7 @@ spec:
             - name: CSI_ENDPOINT
               value: unix:///csi/csi.sock
             - name: MAX_VOLUMES_PER_NODE
-              value: "59" # Maximum number of volumes that controller can publish to the node. If value is not set or zero Kubernetes decide how many volumes can be published by the controller to the node.
+              value: "0" # Maximum number of volumes that controller can publish to the node. If value is not set or zero Kubernetes decide how many volumes can be published by the controller to the node.
             - name: X_CSI_MODE
               value: "node"
             - name: X_CSI_SPEC_REQ_VALIDATION
