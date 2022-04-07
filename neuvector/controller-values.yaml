@@ -26,4 +26,4 @@ controller:
     enabled: true
     accessModes:
       - ReadWriteMany
-    storageClass: vsphere-csp
+    storageClass: vsphere-csi-sc
