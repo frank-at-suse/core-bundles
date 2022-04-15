@@ -1,8 +1,10 @@
 cve:
   scanner:
     image:
-      repository: neuvector/scanner.preview
+      repository: neuvector/scanner
+      tag: latest
     replicas: 1
   updater:
     image:
-      repository: neuvector/updater.preview
+      repository: neuvector/updater
+      tag: latest

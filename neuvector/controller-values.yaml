@@ -1,6 +1,6 @@
 controller:
   image:
-    repository: neuvector/controller.preview
+    repository: neuvector/controller
 # Replica count must be in odd-numbered counts per: https://open-docs.neuvector.com/deploying/production#deploying-the-controllers
   replicas: 1
   apisvc:

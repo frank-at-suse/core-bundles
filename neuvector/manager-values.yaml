@@ -1,6 +1,6 @@
 manager:
   image:
-    repository: neuvector/manager.preview
+    repository: neuvector/manager
   env:
     ssl: false
   ingress:
