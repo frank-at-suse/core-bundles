@@ -2,7 +2,7 @@
 # so homework may be required.  Below tolerations are for RKE2/k3s.  For RKE1, change "control-plane" to "controlplane".
 enforcer:
   image:
-    repository: rancher/mirrored-neuvector-enforcer
+    repository: neuvector/enforcer
   tolerations:
     - effect: NoSchedule
       key: node-role.kubernetes.io/control-plane
