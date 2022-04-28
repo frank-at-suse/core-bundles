@@ -1,0 +1,10 @@
+cve:
+  scanner:
+    image:
+      repository: rancher/mirrored-neuvector-scanner
+      tag: latest
+    replicas: 1
+  updater:
+    image:
+      repository: rancher/mirrored-neuvector-updater
+      tag: latest
