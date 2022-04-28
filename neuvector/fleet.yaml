@@ -4,7 +4,7 @@ helm:
   releaseName: neuvector
   repo: https://github.com/neuvector/neuvector-helm
   chart: core
-  version: 100.0.0+up2.2.0-b1
+  version: 2.2.0-b1
   
   valuesFiles:
     - controller-values.yaml
