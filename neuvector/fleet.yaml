@@ -2,8 +2,8 @@ defaultNamespace: cattle-neuvector-system
 
 helm:
   releaseName: neuvector
-  repo: https://github.com/neuvector/neuvector-helm/charts
-  chart: core
+  repo: https://github.com/rancher/charts
+  chart: neuvector
   version: 5.0.0-b1
   
   valuesFiles:
