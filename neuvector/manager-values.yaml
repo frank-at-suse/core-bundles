@@ -1,6 +1,6 @@
 manager:
   image:
-    repository: rancher/mirrored-neuvector-manager
+    repository: neuvector/manager
   env:
     ssl: false
   ingress:
