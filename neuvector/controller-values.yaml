@@ -20,8 +20,6 @@ controller:
           Password: chang3me!
           Role: admin
           Timeout: 1800
-  ranchersso:
-    enabled: true
   # PVC Requires RWX
   #pvc:
   #  enabled: true
