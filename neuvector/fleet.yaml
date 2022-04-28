@@ -2,7 +2,7 @@ defaultNamespace: cattle-neuvector-system
 
 helm:
   releaseName: neuvector
-  repo: https://github.com/neuvector/neuvector-helm
+  repo: https://github.com/neuvector/neuvector-helm/charts
   chart: core
   version: 2.2.0-b1
   
