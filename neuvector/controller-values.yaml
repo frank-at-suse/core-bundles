@@ -14,7 +14,7 @@ controller:
   secret:
     enabled: true
     data:
-      userinitcfg.yaml:
+      userinitcfg.yaml: # ConfigMap for increasing UI timeout and providing a slightly better "default" password
         users:
         - Fullname: admin
           Password: chang3me!
