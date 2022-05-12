@@ -1,3 +1,3 @@
 # CRI socket options are: bottlerocket, containerd, cri-o, docker, k3s,  Use "k3s" if deploying on RKE2
-docker:
+k3s:
   enabled: true
