@@ -3,7 +3,7 @@ helm:
   releaseName: rancher-cis-benchmark
   repo: https://charts.rancher.io
   chart: rancher-cis-benchmark
-  version: 2.0.2
+  version: 2.0.4
   values:
     resources:
       requests:
